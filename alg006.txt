@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [10]int{74, 62, 71, 80, 83, 56, 16, 48, 9, 93}
+	var num int
+	fmt.Print("digite um número entre 0 e 100: ")
+	fmt.Scan(&num)
+	for _, numV := range array {
+		if numV == num {
+			fmt.Printf("o valor %d está contido no array", num)
+			break
+		}
+		if numV != num {
+
+			fmt.Printf("o valor %d não está contido no array", num)
+			break
+		}
+	}
+}
