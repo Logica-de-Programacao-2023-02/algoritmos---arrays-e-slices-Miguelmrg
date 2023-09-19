@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := []int{1, 3, 5, 7, 9}
+	var num int
+	fmt.Print("digite um número inteiro entre 0 e 10: ")
+	fmt.Scan(&num)
+
+	for _, numV := range array {
+		if numV == num {
+			array = append(array, num)
+			fmt.Println("o número foi adicionado ao array pois ele não existia anteriormente no mesmo: ", array)
+			break
+		}
+		if numV != num {
+			fmt.Println("o número já existia no array, então não foi adicionado. ")
+			break
+		}
+	}
+}
