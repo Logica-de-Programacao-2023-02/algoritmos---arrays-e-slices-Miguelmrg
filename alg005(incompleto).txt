@@ -4,13 +4,20 @@ import "fmt"
 
 func main() {
 	var matriz [3][2]int
+
+	fmt.Println("Digite os valores para a matriz 3x2:")
 	for i := 0; i < 3; i++ {
 		for j := 0; j < 2; j++ {
-			fmt.Printf("digite o valor contido nas linhas: [%d] e informe o valor da coluna: [%d] .", i, j)
-			fmt.Scanln(&matriz[i][j])
+			fmt.Printf("Digite o valor para a linha %d, coluna %d: ", i+1, j+1)
+			fmt.Scan(&matriz[i][j])
 		}
 	}
-	for _, mat := range matriz {
-		fmt.Print(mat)
+
+	fmt.Println("Matriz resultante:")
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("%d ", matriz[i][j])
+		}
+		fmt.Println()
 	}
 }
