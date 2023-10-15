@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	array := [6]float64{}
+
+	fmt.Print("Digite um número para adicionar em todas as posições do array: ")
+	var numero float64
+	fmt.Scan(&numero)
+
+	for i := 0; i < len(array); i++ {
+		array[i] = numero
+	}
+	fmt.Println("Array resultante:", array)
+}
