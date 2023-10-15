@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	slice := make([]string, 8)
+	for i := 0; i < 8; i++ {
+		fmt.Printf("Digite o valor para a posição %d: ", i)
+		var valor string
+		fmt.Scan(&valor)
+		slice[i] = valor
+	}
+	fmt.Print("Digite o valor a ser removido: ")
+	var valorRemover string
+	fmt.Scan(&valorRemover)
+
+	var novoSlice []string
+	for _, elemento := range slice {
+		if elemento != valorRemover {
+			novoSlice = append(novoSlice, elemento)
+		}
+	}
+	fmt.Println("Slice após remover as ocorrências do valor:")
+	fmt.Println(novoSlice)
+}
