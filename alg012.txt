@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	array := [5]int{7, 9, 12, 5, 18}
+
+	var multiplosDe3 []int
+
+	for _, num := range array {
+		if num%3 == 0 {
+			multiplosDe3 = append(multiplosDe3, num)
+		}
+	}
+	fmt.Println("Múltiplos de 3 no array:", multiplosDe3)
+}
