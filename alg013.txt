@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	array := [7]int{2, 5, 8, 10, 3, 6, 9}
+
+	var numero int
+	fmt.Print("Digite um número para adicionar ao primeiro e último elemento do array: ")
+	fmt.Scan(&numero)
+
+	array[0] += numero
+	array[len(array)-1] += numero
+
+	fmt.Println("Array resultante:", array)
+}
